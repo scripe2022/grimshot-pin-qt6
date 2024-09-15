@@ -17,9 +17,9 @@ class ScreenshotWindow(QLabel):
         self.setObjectName("ScreenshotWindow")
 
         self.setWindowFlags(
-            Qt.WindowType.Dialog |                # 设置为对话框窗口
-            Qt.WindowType.WindowStaysOnTopHint |  # 使其保持在其他窗口之上
-            Qt.WindowType.FramelessWindowHint     # 无边框
+            Qt.WindowType.Dialog |
+            Qt.WindowType.WindowStaysOnTopHint |
+            Qt.WindowType.FramelessWindowHint
         )
 
         self.resize(pixmap.size())
@@ -121,7 +121,7 @@ class ScreenshotWindow(QLabel):
         file_path, _ = QFileDialog.getSaveFileName(self, "Save File", "", "PNG Images (*.png)")
         if file_path:
             if not file_path.lower().endswith('.png'):
-                file_path += '.png'  # 确保文件以 .png 结尾
+                file_path += '.png'
             self.pixmap().save(file_path, "PNG")
 
 
