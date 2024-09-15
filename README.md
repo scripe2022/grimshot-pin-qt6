@@ -1,0 +1,1 @@
+# grimshot-pin-qt6
